@@ -1,7 +1,15 @@
+/** custom configuration: */
+const file = "menu.html";
+const config = {
+    height: 600,
+    width: 800,
+    icon: "images/icon.ico",
+    fullscreen: false
+}
 
+/** electron implementation: */
 const electron = require('electron');
 const { app, BrowserWindow, Menu } = electron;
-const remote = require("electron").remote;
 
 const isMac = process.platform === 'darwin'
 
@@ -44,14 +52,13 @@ const createWindow = () => {
             enableRemoteModule: true,
             additionalArguments: ["volume"]
         },
-        height: 600,
-        width: 800
+        ... config
     })
     mainWindow.on('show', () => { 
         mainWindow.focus(); 
     });
-
-    mainWindow.loadFile("menu.html");
+    mainWindow.loadFile(file);
+    mainWindow.loadFile(file);
     mainWindow.show();
     mainWindow.focus();
     // debugging html page:

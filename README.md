@@ -1,13 +1,12 @@
 # Note
-We do not condone nor support using this for illegal ROM files! This was designed to help homebrew devs! 
-
+We do not condone nor support using this for illegal ROM files! This was designed to help homebrew devs!
 # About
 ## BubbleWrap
 BubbleWrap is a collection of different tools to allow you wrap your GB rom into an executable file (e.g. ".exe"). It is made possible by mooonbit and timbojay.
 Why is it called BubbleWrap? Because it was originally made to bring BubbleFrog to steam. BubbleFrog is timbojay's original GB Game (https://timbojay.itch.io/bubblefrog).
 
 See below to learn about the different tools used in this package.
-![BubbleWrap](BubbleWrap_logo.webp)
+![BubbleWrap](images/BubbleWrap_logo.png)
 
 ## Redistribute?
 BubbleWrap is free to use and distributing your game is permitted.
@@ -21,7 +20,17 @@ If you need a feature or you have a bug you can contact mooonbit via instagram m
 
 # Instruction
 ## Basics
-Put your GB rom into "rom" folder and rename it to "game.gb"
+Put your GB rom into "rom" folder and rename it to "game.gb".
+Change icon in "images/icon.ico".
+Change Background image in "image/background.webp".
+
+### Configuration
+At the top of index.js you can change the following parameters to change the appereance of the window:
+height: window height
+width: window width,
+fullscreen: can be true or false: start with or without fullscreen mode
+}
+
 ### With title-menu in html
 Edit "menu.html" HTML file to your wishes if you want to display a custom menu before starting up the game.
 #### Debug the title-menu
