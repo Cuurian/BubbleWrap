@@ -38,8 +38,8 @@ To debug the App's html you can simply uncomment line 58 in index.js.
 "mainWindow.webContents.openDevTools()"
 
 ### Without title-menu
-Edit the index.js file in the root folder. In line 54 replace "menu.html" with "index.html":
-'mainWindow.loadFile("index.html");'.
+Edit the index.js file in the root folder. On top of the file replace "menu.html" with "index.html":
+'const file = index.html'.
 
 ## Test & Build
 - NPM needs to be installed (https://nodejs.org/en/download)
