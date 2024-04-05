@@ -10,6 +10,7 @@ const config = {
 /** electron implementation: */
 const electron = require('electron');
 const { app, BrowserWindow, Menu } = electron;
+if (require('electron-squirrel-startup')) app.quit();
 
 const isMac = process.platform === 'darwin'
 
@@ -42,7 +43,6 @@ const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 
 let mainWindow;
-
 const createWindow = () => {
     app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
     mainWindow = new BrowserWindow({
