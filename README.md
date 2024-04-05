@@ -6,7 +6,7 @@ BubbleWrap is a collection of different tools to allow you wrap your GB rom into
 Why is it called BubbleWrap? Because it was originally made to bring BubbleFrog to steam. BubbleFrog is timbojay's original GB Game (https://timbojay.itch.io/bubblefrog).
 
 See below to learn about the different tools used in this package.
-![BubbleWrap](images/BubbleWrap_logo.png)
+![BubbleWrap](images/BubbleWrap_logo_blue.png)
 
 ## Redistribute?
 BubbleWrap is free to use and distributing your game is permitted.
@@ -29,13 +29,11 @@ At the top of index.js you can change the following parameters to change the app
 height: window height
 width: window width,
 fullscreen: can be true or false: start with or without fullscreen mode
-}
 
 ### With title-menu in html
 Edit "menu.html" HTML file to your wishes if you want to display a custom menu before starting up the game.
 #### Debug the title-menu
-To debug the App's html you can simply uncomment line 58 in index.js. 
-"mainWindow.webContents.openDevTools()"
+To debug the App's html and js you can set debug = true in index.js at the top.
 
 ### Without title-menu
 Edit the index.js file in the root folder. On top of the file replace "menu.html" with "index.html":
@@ -43,10 +41,13 @@ Edit the index.js file in the root folder. On top of the file replace "menu.html
 
 ## Test & Build
 - NPM needs to be installed (https://nodejs.org/en/download)
-- On the first time: Open terminal in the BubbleWrap folder, type and run "npm install". Wait until it's finished.
+- On the first time: Open terminal in the BubbleWrap folder, type and run "npm install". Wait until it's finished. After this run "npm install --save-dev @electron-forge/plugin-fuses". Wait again until finished.
 
-- To test your app, open the terminal in root folder, type and run: "npm run electron"
-- To create an executable of your game for Windows, do as follows: Open terminal, type and run in root folder: "npx electron-packager "./" "BubbleWrap" --platform=win32 --arch="x64"". This creates a folder with the ".exe" file. A full list of supported plattforms for packaging your game can be found at https://github.com/electron/packager/blob/main/README.md#supported-platforms
+- To test your app, open the terminal in root folder, type and run: "npm run start"
+- To create an installer of your game for your current OS, do as follows:
+Open terminal, type and run in root folder: "npm run make"
+If you want to create standalone executables for windows run:
+"npx electron-packager "./" "BubbleWrap" --platform=win32 --arch="x64"". This creates a folder with the ".exe" file. A full list of supported plattforms for packaging your game can be found at https://github.com/electron/packager/blob/main/README.md#supported-platforms
 
 # How does BubbleWrap work?
 ## binjgb files generated with GB Studio
@@ -54,8 +55,5 @@ Fork of binji's Game Boy emulator built as a WebAssembly module.
 
 It includes changes from [Daid's fork](https://github.com/daid/binjgb) and others to better support GB Studio.
 
-## electron
-Electron packages the html page.
-
-## electron-packager
-Electron-packager is used to build an executable.
+## electron-forge
+Electron Forge is an all-in-one tool for packaging and distributing Electron applications. It combines many single-purpose packages to create a full build pipeline that works out of the box, complete with code signing, installers, and artifact publishing.

@@ -6,6 +6,7 @@ const config = {
     icon: "images/icon.ico",
     fullscreen: false
 }
+const debug = false;
 
 /** electron implementation: */
 const electron = require('electron');
@@ -62,7 +63,9 @@ const createWindow = () => {
     mainWindow.show();
     mainWindow.focus();
     // debugging html page:
-    // mainWindow.webContents.openDevTools()
+    if (debug) {
+      mainWindow.webContents.openDevTools();
+    }
 };
 
 app.whenReady().then(() => {
