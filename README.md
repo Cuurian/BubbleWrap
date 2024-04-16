@@ -4,7 +4,7 @@ We do not condone nor support using this for illegal ROM files! This was designe
 - NPM needs to be installed (https://nodejs.org/en/download)
 - On the first time only: doubleclick "install.bat" to install dependencies
 - Doubleclick test.bat to test your app
-- Doubleclick createInstaller.bat to create an installer for the current system
+- Doubleclick createInstaller.bat to create an installer for the current system. The installer will be created in a folder called "out".
 # About
 ## BubbleWrap
 BubbleWrap is a collection of different tools to allow you wrap your GB rom into an executable file (e.g. ".exe"). It is made possible by mooonbit and timbojay.
