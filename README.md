@@ -2,9 +2,11 @@
 We do not condone nor support using this for illegal ROM files! This was designed to help homebrew devs!
 # Quickstart on Windows
 - NPM needs to be installed (https://nodejs.org/en/download)
+- Put your rom into "rom/game.gb"
 - On the first time only: doubleclick "install.bat" to install dependencies
 - Doubleclick test.bat to test your app
 - Doubleclick createInstaller.bat to create an installer for the current system. The installer will be created in a folder called "out".
+- Detailed instructions can be read below in the section "Instruction"
 # About
 ## BubbleWrap
 BubbleWrap is a collection of different tools to allow you wrap your GB rom into an executable file (e.g. ".exe"). It is made possible by mooonbit and timbojay.
@@ -39,6 +41,7 @@ fullscreen: can be true or false: start with or without fullscreen mode
 
 ### With title-menu in html
 Edit "menu.html" HTML file to your wishes if you want to display a custom menu before starting up the game.
+
 #### Debug the title-menu
 To debug the App's html and js you can set debug = true in index.js at the top.
 
