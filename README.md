@@ -11,7 +11,7 @@ BubbleWrap is a collection of different tools to allow you wrap your GB rom into
 Why is it called BubbleWrap? Because it was originally made to bring BubbleFrog to steam. BubbleFrog is timbojay's original GB Game (https://timbojay.itch.io/bubblefrog).
 
 See below to learn about the different tools used in this package.
-![BubbleWrap](images/BubbleWrap_logo_blue.png)
+![BubbleWrap](./images/BubbleWrap_logo_blue.png)
 
 ## Redistribute?
 BubbleWrap is free to use and distributing your game is permitted.
@@ -29,7 +29,7 @@ Put your GB rom into "rom" folder and rename it to "game.gb".
 Change icon in "images/icon.ico".
 Change Background image in "image/background.webp".
 Change window title:
-In the menu.html and index.html replace the text inside the <title></title> tag in the <head></head> tag to change the window name.
+In the menu.html and index.html replace the text inside the <title></title> tag to change the window name.
 
 ### Configuration
 At the top of index.js you can change the following parameters to change the appereance of the window:
