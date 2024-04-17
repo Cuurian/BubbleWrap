@@ -28,6 +28,8 @@ If you need a feature or you have a bug you can contact mooonbit via instagram m
 Put your GB rom into "rom" folder and rename it to "game.gb".
 Change icon in "images/icon.ico".
 Change Background image in "image/background.webp".
+Change window title:
+In the menu.html and index.html replace the text inside the <title></title> tag in the <head></head> tag to change the window name.
 
 ### Configuration
 At the top of index.js you can change the following parameters to change the appereance of the window:
