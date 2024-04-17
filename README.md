@@ -11,7 +11,7 @@ BubbleWrap is a collection of different tools to allow you wrap your GB rom into
 Why is it called BubbleWrap? Because it was originally made to bring BubbleFrog to steam. BubbleFrog is timbojay's original GB Game (https://timbojay.itch.io/bubblefrog).
 
 See below to learn about the different tools used in this package.
-![BubbleWrap](./images/BubbleWrap_logo_blue.png)
+![BubbleWrap](./images/Bubblewrap_logo_blue.png)
 
 ## Redistribute?
 BubbleWrap is free to use and distributing your game is permitted.
