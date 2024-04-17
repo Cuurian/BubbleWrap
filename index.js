@@ -6,10 +6,12 @@ const config = {
     icon: "images/icon.ico",
     fullscreen: false
 }
+const debug = false;
 
 /** electron implementation: */
 const electron = require('electron');
 const { app, BrowserWindow, Menu } = electron;
+if (require('electron-squirrel-startup')) app.quit();
 
 const isMac = process.platform === 'darwin'
 
@@ -42,7 +44,6 @@ const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 
 let mainWindow;
-
 const createWindow = () => {
     app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
     mainWindow = new BrowserWindow({
@@ -62,7 +63,9 @@ const createWindow = () => {
     mainWindow.show();
     mainWindow.focus();
     // debugging html page:
-    // mainWindow.webContents.openDevTools()
+    if (debug) {
+      mainWindow.webContents.openDevTools();
+    }
 };
 
 app.whenReady().then(() => {
