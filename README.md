@@ -1,3 +1,6 @@
+Fork of BubbleWrap with personal modifications tailored for my game, Witches and Butchers
+
+
 # Note
 We do not condone nor support using this for illegal ROM files! This was designed to help homebrew devs!
 # Quickstart on Windows
