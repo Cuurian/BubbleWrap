@@ -1,5 +1,5 @@
 /** custom configuration: */
-const file = "menu.html";
+const file = "index.html";
 const config = {
     height: 600,
     width: 800,
@@ -40,8 +40,8 @@ const template = [
   }
 ]
 
-const menu = Menu.buildFromTemplate(template)
-Menu.setApplicationMenu(menu)
+//const menu = Menu.buildFromTemplate(template)
+Menu.setApplicationMenu(null)
 
 let mainWindow;
 const createWindow = () => {
