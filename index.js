@@ -62,6 +62,7 @@ const createWindow = () => {
     mainWindow.loadFile(file);
     mainWindow.show();
     mainWindow.focus();
+    mainWindow.setFullScreen(true);
     // debugging html page:
     if (debug) {
       mainWindow.webContents.openDevTools();
