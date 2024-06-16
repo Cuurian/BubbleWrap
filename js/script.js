@@ -14,6 +14,29 @@ console.log("volParam:" + volParam);
  * of the MIT license.  See the LICENSE file for details.
  */
 "use strict";
+var menuref;
+
+//Added by Cuu. November 8 2022
+//Witches and Butchers: depending on the window size, display border or black color only.
+function checkForBorder(){
+  var aspectratio = window.innerWidth / window.innerHeight;
+
+  if(aspectratio < 1.7){
+    document.getElementById('bun').style.backgroundSize = "0 0";
+
+  }else{
+    document.getElementById('bun').style.backgroundSize = "cover";
+  }
+
+}
+checkForBorder();
+addEventListener('resize', (event) => {});
+
+onresize = (event) => {
+  
+  checkForBorder();
+
+};
 
 // User configurable.
 const ROM_FILENAME = "rom/game.gb";
@@ -135,6 +158,13 @@ class VM {
 
   togglePause() {
     this.paused = !this.paused;
+    menuref = document.getElementsByClassName('Menu')[0];
+      if (this.paused){
+        menuref.style.display = 'flex';
+      }
+      else{
+        menuref.style.display = 'none';
+      }
   }
 
   updateExtRam() {
@@ -487,7 +517,7 @@ class Emulator {
   bindKeys() {
     this.keyFuncs = {
       Backspace: this.keyRewind.bind(this),
-      " ": this.keyPause.bind(this),
+      "Escape": this.keyPause.bind(this),
       "[": this.keyPrevPalette.bind(this),
       "]": this.keyNextPalette.bind(this),
     };
@@ -533,8 +563,8 @@ class Emulator {
         this.keyFuncs[k] = this.setJoypA.bind(this);
       });
     } else {
-      this.keyFuncs["z"] = this.setJoypA.bind(this);
-      this.keyFuncs["j"] = this.setJoypA.bind(this);
+      this.keyFuncs["x"] = this.setJoypA.bind(this);
+      this.keyFuncs["k"] = this.setJoypA.bind(this);
       this.keyFuncs["Alt"] = this.setJoypA.bind(this);
     }
 
@@ -543,8 +573,8 @@ class Emulator {
         this.keyFuncs[k] = this.setJoypB.bind(this);
       });
     } else {
-      this.keyFuncs["x"] = this.setJoypB.bind(this);
-      this.keyFuncs["k"] = this.setJoypB.bind(this);
+      this.keyFuncs["z"] = this.setJoypB.bind(this);
+      this.keyFuncs["j"] = this.setJoypB.bind(this);
       this.keyFuncs["Control"] = this.setJoypB.bind(this);
     }
 

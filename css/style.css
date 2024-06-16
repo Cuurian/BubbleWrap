@@ -1,5 +1,7 @@
 body {
-  background: #031921;
+  background-color: #000;
+  background-image: url(../images/border.png);
+  background-size: cover;
   color: #fff;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -12,6 +14,18 @@ body {
   -webkit-user-select: none;
   overflow: hidden;
 }
+
+@font-face {
+  font-family: BetterPixels;
+  src: url(../fonts/BetterPixels.ttf);
+}
+
+.MenuItem{
+  font-family: BetterPixels;
+  color: white;
+}
+
+
 
 #game {
   display: flex;
@@ -319,3 +333,33 @@ body {
     opacity: 0.5;
   }
 }
+
+.Menu{
+  position: fixed;
+  font-family: 'BetterPixels';
+  src: URL('BetterPixels.ttf') format('truetype');
+  font-size: 2vw;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#game overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
