@@ -2,7 +2,7 @@
 const file = "index.html";
 const config = {
     height: 600,
-    width: 800,
+    width: 720,
     icon: "images/icon.ico",
     fullscreen: false
 }
@@ -73,9 +73,11 @@ app.whenReady().then(() => {
     createWindow();
 })
 app.on('ready', function() {
-    const ret = electron.globalShortcut.register('Escape', function() {
+    const ret = electron.globalShortcut.register('F11', function() {
         if (mainWindow.isFullScreen()) {
             mainWindow.setFullScreen(false);
+        }else{
+          mainWindow.setFullScreen(true);
         }
     });
 })
