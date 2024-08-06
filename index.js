@@ -87,12 +87,27 @@ app.on('window-all-closed', () => {
 })
 
 ipcMain.on('toggleFullscreen', (event) => {
-  if(mainWindow.fullScreen == true){
-    mainWindow.fullScreen = false;
-  }else{
-    mainWindow.fullScreen = true;
-  }
-  var res = mainWindow.fullScreen;
+	
+	if (process.platform == 'darwin'){
+		if(mainWindow.isMaximized()){
+			mainWindow.unmaximize();
+		}else{
+			mainWindow.maximize()
+		}
+  var res = mainWindow.isMaximized;
+	}
+	else{
+		if(mainWindow.fullScreen == true){
+			mainWindow.fullScreen = false;
+		}
+		else{
+			mainWindow.fullScreen = true;
+		}
+		  var res = mainWindow.fullScreen;
+	}
+	
+
+
   
   //console.log("zaza");
   event.returnValue = res;
