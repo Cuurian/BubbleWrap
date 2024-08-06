@@ -10,7 +10,7 @@ const debug = false;
 
 /** electron implementation: */
 const electron = require('electron');
-const { app, BrowserWindow, Menu } = electron;
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 if (require('electron-squirrel-startup')) app.quit();
 
 const isMac = process.platform === 'darwin'
@@ -84,4 +84,20 @@ app.on('ready', function() {
   
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()
+})
+
+ipcMain.on('toggleFullscreen', (event) => {
+  if(mainWindow.fullScreen == true){
+    mainWindow.fullScreen = false;
+  }else{
+    mainWindow.fullScreen = true;
+  }
+  var res = mainWindow.fullScreen;
+  
+  //console.log("zaza");
+  event.returnValue = res;
+})
+
+ipcMain.on('exitGame', (event) => {
+  mainWindow.close();
 })

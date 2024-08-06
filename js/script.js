@@ -40,8 +40,8 @@ onresize = (event) => {
 
 // User configurable.
 const ROM_FILENAME = "rom/game.gb";
-const ENABLE_REWIND = true;
-const ENABLE_PAUSE = false;
+const ENABLE_REWIND = false;
+const ENABLE_PAUSE = true;
 const ENABLE_SWITCH_PALETTES = true;
 const OSGP_DEADZONE = 0.1; // On screen gamepad deadzone range
 const CGB_COLOR_CURVE = 2; // 0: none, 1: Sameboy "Emulate Hardware" 2: Gambatte/Gameboy Online

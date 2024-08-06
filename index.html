@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Witches And Butchers</title>
-    <meta name="author" content="timbo" />
     <style type="text/css"> body { background-color:#undefined; }</style>
     
   </head>
@@ -25,9 +24,31 @@
       <div id="controller_start" class="capsuleBtn">Start</div>
       <div id="controller_b" class="roundBtn">B</div>
       <div id="controller_a" class="roundBtn">A</div>
-    </div>      
+    </div>  
+    
+    <div class="centered">
+    <div class="Menu vertical-center" style="display: none;background-color:rgba(0, 0, 0, 0.75);">
+      
+	  <ul style="list-style-type: none;padding: 0;margin: 0;">
+		<li>
+		  <h2 class="MenuItem" style="margin: 8px;">Game Paused!</h2>
+		</li>
+		<li>
+		  <h3 class="MenuItem" id="resume_button" style="margin: 8px;" onmouseover="highlightHovered(0)" onclick="unpause()">Resume Game</h3>
+		</li>
+		<li>
+		  <h4 class="MenuItem" id="fullscreen_button" onmouseover="highlightHovered(1)" onclick="toggleFullscreen()">Toggle Full Screen</h4>
+		</li>
+		<li>
+		  <h3 class="MenuItem" id="exit_button" onmouseover="highlightHovered(2)" onclick="exitGame()">Exit Game</h3>
+		</li>
+	  </ul>
+	  
+
+	</div>   
+	</div>     
     <script>
-      const customControls = {}
+		const customControls = {"a":["k","x"],"b":["j","z"],"select":["Shift"," "]};
     </script>
     <script src="binjgb.js"></script>
     <script src="js/script.js"></script>
