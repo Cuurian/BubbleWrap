@@ -39,8 +39,11 @@
 		<li>
 		  <h4 class="MenuItem" id="fullscreen_button" onmouseover="highlightHovered(1)" onclick="toggleFullscreen()">Toggle Full Screen</h4>
 		</li>
+    <li>
+		  <h4 class="MenuItem" id="keyconfig_button" onmouseover="highlightHovered(2)" onclick="showKeyConfig()">Key Mapping</h4>
+		</li>
 		<li>
-		  <h3 class="MenuItem" id="exit_button" onmouseover="highlightHovered(2)" onclick="exitGame()">Exit Game</h3>
+		  <h3 class="MenuItem" id="exit_button" onmouseover="highlightHovered(3)" onclick="exitGame()">Exit Game</h3>
 		</li>
 	  </ul>
 	  
@@ -48,7 +51,7 @@
 	</div>   
 	</div>     
     <script>
-		const customControls = {"a":["k","x"],"b":["j","z"],"select":["Shift"," "]};
+		var customControls = {"a":["k","x"],"b":["j","z"],"select":["Shift"," "]};
     </script>
     <script src="binjgb.js"></script>
     <script src="js/script.js"></script>

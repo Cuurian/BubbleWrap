@@ -16,16 +16,25 @@ function highlightMenuOption(index){
       case 0:
         document.getElementById("resume_button").style.color = "purple";
         document.getElementById("fullscreen_button").style.color = "white";
+        document.getElementById("keyconfig_button").style.color = "white";
         document.getElementById("exit_button").style.color = "white";
         break;
       case 1:
         document.getElementById("resume_button").style.color = "white";
         document.getElementById("fullscreen_button").style.color = "purple";
+        document.getElementById("keyconfig_button").style.color = "white";
         document.getElementById("exit_button").style.color = "white";
         break;
       case 2:
         document.getElementById("resume_button").style.color = "white";
         document.getElementById("fullscreen_button").style.color = "white";
+        document.getElementById("keyconfig_button").style.color = "purple";
+        document.getElementById("exit_button").style.color = "white";
+        break;
+        case 3:
+        document.getElementById("resume_button").style.color = "white";
+        document.getElementById("fullscreen_button").style.color = "white";
+        document.getElementById("keyconfig_button").style.color = "white";
         document.getElementById("exit_button").style.color = "purple";
         break;
       default:
@@ -69,6 +78,9 @@ function button_accept(){
         toggleFullscreen();
           break;
         case 2:
+          showKeyConfig();
+          break;
+        case 3:
           exitGame();
           break;
         default:
@@ -76,6 +88,11 @@ function button_accept(){
       } 
   }
 }
+
+function showKeyConfig(){
+ alert("bun");
+}
+
 
 function button_cancel(){
   
