@@ -7,8 +7,12 @@ const { ipcRenderer } = require('electron');
 //Used for debugging because CUU IS A HACK who doesnt know 
 //how to access the developer console in el*ctron
 function outputStuff(texto){
-  dbg_text = document.getElementsByClassName("pausetext")[0];
+  dbg_text = document.getElementsByClassName("OutputText")[0];
+  dbg_text.style.display = 'block';
   dbg_text.innerHTML = texto;
+  setTimeout(function() {
+  dbg_text.style.display = 'none';
+}, 1500);
 }
 
 function highlightMenuOption(index){
@@ -90,7 +94,7 @@ function button_accept(){
 }
 
 function showKeyConfig(){
- alert("bun");
+ outputStuff("Work in progress");
 }
 
 
@@ -111,7 +115,7 @@ function button_up(){
 }
 
 function button_down(){
-  if(menuIndex<2){
+  if(menuIndex<3){
   menuIndex++;
   highlightMenuOption(menuIndex);
   }

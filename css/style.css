@@ -20,6 +20,13 @@ body {
   src: url(../fonts/BetterPixels.ttf);
 }
 
+
+.OutputText{
+  font-family: BetterPixels;
+  font-size: 80px;
+  color: white;
+}
+
 .MenuItem{
   font-family: BetterPixels;
   color: white;
